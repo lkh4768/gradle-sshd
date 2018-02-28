@@ -1,7 +1,6 @@
 FROM	gradle:4.5.1-jdk8
 
-RUN apt-get update \
-	&& apt-get install -y --no-install-recommends apt-transport-https \
+RUN apt-get -y update \
 	&& apt-get install -y --no-install-recommends openssh-server \
 	&& rm -rf /var/lib/apt/lists/*
 
